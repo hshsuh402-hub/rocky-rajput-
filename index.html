@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Rocky Rajput Shayari</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #111111, #2b0b0b, #000000);
+      color: white;
+      min-height: 100vh;
+    }
+
+    .header {
+      text-align: center;
+      padding: 35px 15px 20px;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 32px;
+      color: #ffcc66;
+    }
+
+    .header p {
+      margin-top: 8px;
+      color: #dddddd;
+      font-size: 16px;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 750px;
+      margin: auto;
+      padding-bottom: 40px;
+    }
+
+    .shayari {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 204, 102, 0.35);
+      border-radius: 18px;
+      padding: 22px;
+      margin: 18px 0;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+    }
+
+    .shayari p {
+      margin: 0;
+      white-space: pre-line;
+      text-align: center;
+      line-height: 1.8;
+      font-size: 18px;
+    }
+
+    .number {
+      text-align: center;
+      color: #ffcc66;
+      margin-bottom: 12px;
+      font-size: 14px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      color: #aaaaaa;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="header">
+    <h1>❤️ Rocky Rajput ❤️</h1>
+    <p>मेरी शायरी की दुनिया</p>
+  </div>
+
+  <div class="container" id="shayariList">
+  </div>
+
+  <div class="footer">
+    © Rocky Rajput
+  </div>
+
+  <script>
+
+    // =====================================
+    // अपनी शायरी यहाँ लिखें
+    // जितनी चाहो उतनी शायरी जोड़ सकते हो
+    // =====================================
+
+    const shayaris = [
+
+      `तेरी यादों में कुछ इस तरह खो जाते हैं,
+      खुद से ज्यादा अब तुझे चाहने लग जाते हैं।`,
+
+      `मोहब्बत वो नहीं जो दुनिया को दिखाई जाए,
+      मोहब्बत वो है जो दिल से निभाई जाए।`,
+
+      `कुछ रिश्ते दिल के इतने करीब होते हैं,
+      दूर होकर भी हमेशा करीब होते हैं।`,
+
+      `तेरे बिना अधूरी सी लगती है जिंदगी,
+      तू मिले तो पूरी हो जाए हर खुशी।`,
+
+      `हमने तो दिल से चाहा था तुम्हें,
+      शायद इसलिए आज भी याद करते हैं तुम्हें।`
+
+    ];
+
+
+    // =====================================
+    // नीचे का code अपने आप शायरी दिखाएगा
+    // =====================================
+
+    const list = document.getElementById("shayariList");
+
+    shayaris.forEach((text, index) => {
+
+      const box = document.createElement("div");
+      box.className = "shayari";
+
+      box.innerHTML = `
+        <div class="number">शायरी ${index + 1}</div>
+        <p>${text}</p>
+      `;
+
+      list.appendChild(box);
+
+    });
+
+  </script>
+
+</body>
+</html>
